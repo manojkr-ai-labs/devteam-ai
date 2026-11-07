@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevTeam / ARCHIVE — CASE-8821 (8f3c1a)</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#ccc6bc",
+            "on-tertiary-container": "#5f8e77",
+            "on-background": "#1b1c19",
+            "primary": "#000000",
+            "secondary-container": "#eae1da",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#eae8e3",
+            "secondary-fixed-dim": "#cdc5bf",
+            "tertiary-container": "#002115",
+            "on-primary-container": "#87837d",
+            "inverse-surface": "#30312e",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#1f1b17",
+            "on-surface-variant": "#4a463f",
+            "primary-container": "#1d1b17",
+            "inverse-primary": "#cbc6bf",
+            "tertiary": "#000000",
+            "on-tertiary-fixed-variant": "#204f3c",
+            "primary-fixed-dim": "#cbc6bf",
+            "tertiary-fixed-dim": "#a0d1b8",
+            "on-primary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-container": "#f0eee9",
+            "on-tertiary-fixed": "#002115",
+            "surface-container-highest": "#e4e2dd",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#69635e",
+            "surface-container-low": "#f5f3ee",
+            "surface": "#fbf9f4",
+            "background": "#fbf9f4",
+            "surface-dim": "#dcdad5",
+            "on-primary-fixed": "#1d1b17",
+            "on-primary-fixed-variant": "#494641",
+            "surface-tint": "#615e59",
+            "surface-variant": "#e4e2dd",
+            "inverse-on-surface": "#f3f1ec",
+            "primary-fixed": "#e8e1db",
+            "on-surface": "#1b1c19",
+            "surface-bright": "#fbf9f4",
+            "on-secondary": "#ffffff",
+            "outline": "#7b766e",
+            "secondary": "#635d58",
+            "tertiary-fixed": "#bbeed3",
+            "on-secondary-fixed-variant": "#4b4641",
+            "secondary-fixed": "#eae1da",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "code-base": ["Courier Prime"],
+            "headline-lg": ["Newsreader"],
+            "body-md": ["IBM Plex Sans"],
+            "section-marker": ["IBM Plex Sans"],
+            "code-meta": ["Courier Prime"],
+            "headline-xl": ["Newsreader"],
+            "meta-sm": ["IBM Plex Sans"],
+            "body-lg": ["IBM Plex Sans"],
+            "meta-xs": ["IBM Plex Sans"]
+          },
+          "fontSize": {
+            "code-base": ["13px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }],
+            "section-marker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "code-meta": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "meta-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }],
+            "meta-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-[#f3f1ec] text-[#1a1814] min-h-full flex flex-col font-body-md text-body-md antialiased selection:bg-[#eae1da] selection:text-[#1a1814]">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-space-xl py-space-sm max-w-7xl mx-auto">
+<div class="flex items-center gap-space-md">
+<span class="font-section-marker text-section-marker tracking-widest text-on-surface dark:text-inverse-on-surface uppercase">DevTeam / ARCHIVE</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface dark:text-inverse-on-surface font-code-meta text-code-meta">org / repo / CASE-8821</span>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-code-meta text-code-meta hover:text-on-tertiary-fixed-variant dark:hover:text-tertiary-fixed underline underline-offset-4 flex items-center gap-space-xs" href="#eng-core">
+          SWITCH #ENG-CORE
+          <span class="material-symbols-outlined text-[13px] leading-none" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Dossier Canvas -->
+<main class="flex-grow w-full max-w-[760px] mx-auto px-space-lg md:px-space-xl py-12 md:py-16">
+<!-- Navigation back & Task context -->
+<div class="mb-8">
+<a class="inline-flex items-center text-secondary font-code-base text-[12px] leading-[16px] hover:text-[#1e4d3a] underline underline-offset-2" href="#open-work">
+        ← Open work
+      </a>
+<!-- Meta line with strict 2px pine tick -->
+<div class="mt-4 flex items-center flex-wrap gap-x-3 text-secondary font-code-base text-[12px] leading-[16px]">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-[2px] h-[11px] bg-[#1e4d3a]"></span>
+<span class="text-[#1a1814] font-medium">8f3c1a</span>
+</div>
+<span class="text-outline-variant">·</span>
+<span>high</span>
+<span class="text-outline-variant">·</span>
+<span class="tracking-wide">AWAITING APPROVAL</span>
+<span class="text-outline-variant">·</span>
+<span>updated 2m ago</span>
+</div>
+<!-- Dossier Title -->
+<h1 class="mt-5 font-headline-xl text-headline-xl text-[#1a1814] font-normal tracking-tight">
+        Checkout API returns HTTP 500 after user login
+      </h1>
+<!-- Dossier Root Summary -->
+<p class="mt-4 font-body-lg text-body-lg text-[#1a1814] leading-relaxed">
+        Checkout reads session.cart_id. Login returns a session that never sets it.
+      </p>
+</div>
+<!-- 01 / TIMELINE -->
+<section class="mt-12">
+<div class="flex items-center gap-2 mb-2 font-section-marker text-section-marker text-secondary">
+<span>01</span>
+<span>/</span>
+<span>TIMELINE</span>
+</div>
+<div class="w-full h-px bg-[#e3ddd4] mb-6"></div>
+<!-- Timeline stream with left vertical hairline -->
+<div class="relative pl-6 border-l border-[#e3ddd4] space-y-4 font-code-base text-code-base">
+<div class="relative">
+<span class="absolute -left-[27px] top-[7px] w-[5px] h-[1px] bg-[#e3ddd4]"></span>
+<div class="flex items-baseline gap-3">
+<span class="text-secondary w-12 shrink-0">18:02</span>
+<span class="text-secondary font-medium">agent</span>
+<span class="text-[#1a1814]">Received. Task 8f3c1a</span>
+</div>
+</div>
+<div class="relative">
+<span class="absolute -left-[27px] top-[7px] w-[5px] h-[1px] bg-[#e3ddd4]"></span>
+<div class="flex items-baseline gap-3">
+<span class="text-secondary w-12 shrink-0">18:03</span>
+<span class="text-secondary font-medium">agent</span>
+<span class="text-[#1a1814]">Classified bug, priority high</span>
+</div>
+</div>
+<div class="relative">
+<span class="absolute -left-[27px] top-[7px] w-[5px] h-[1px] bg-[#e3ddd4]"></span>
+<div class="flex items-baseline gap-3">
+<span class="text-secondary w-12 shrink-0">18:04</span>
+<span class="text-secondary font-medium">agent</span>
+<span class="text-[#1a1814]">Hypothesis stored. Two files read</span>
+</div>
+</div>
+<div class="relative">
+<span class="absolute -left-[27px] top-[7px] w-[5px] h-[1px] bg-[#e3ddd4]"></span>
+<div class="flex items-baseline gap-3">
+<span class="text-secondary w-12 shrink-0">18:06</span>
+<span class="text-secondary font-medium">agent</span>
+<span class="text-[#1a1814]">Pytest finished, exit 1. Waiting for a human</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 02 / EVIDENCE -->
+<section class="mt-14">
+<div class="flex items-center gap-2 mb-2 font-section-marker text-section-marker text-secondary">
+<span>02</span>
+<span>/</span>
+<span>EVIDENCE</span>
+</div>
+<div class="w-full h-px bg-[#e3ddd4] mb-6"></div>
+<div class="space-y-6">
+<!-- Evidence Item 1 -->
+<div>
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-code-base text-[13px] text-[#1a1814] font-medium">api/checkout.py</span>
+<span class="font-code-base text-[12px] text-secondary">40–52</span>
+</div>
+<div class="bg-[#faf9f6] border border-[#e3ddd4] border-l-2 border-l-[#e3ddd4] p-4 font-code-base text-[13px] leading-relaxed">
+<div class="text-[#1a1814] whitespace-pre">cart_id = session["cart_id"]</div>
+<div class="mt-2 text-secondary text-[12px]">reason: key is missing on a fresh login session</div>
+</div>
+</div>
+<!-- Evidence Item 2 -->
+<div>
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-code-base text-[13px] text-[#1a1814] font-medium">api/auth.py</span>
+<span class="font-code-base text-[12px] text-secondary">18–27</span>
+</div>
+<div class="bg-[#faf9f6] border border-[#e3ddd4] border-l-2 border-l-[#e3ddd4] p-4 font-code-base text-[13px] leading-relaxed">
+<div class="text-[#1a1814] whitespace-pre">return {"user_id": user.id}</div>
+<div class="mt-2 text-secondary text-[12px]">reason: login writes user_id and does not write cart_id</div>
+</div>
+</div>
+<p class="font-body-md text-[13px] text-secondary">
+          Uncertainties: none of the retrieved files set a default cart.
+        </p>
+</div>
+</section>
+<!-- 03 / PATCH -->
+<section class="mt-14">
+<div class="flex items-center gap-2 mb-2 font-section-marker text-section-marker text-secondary">
+<span>03</span>
+<span>/</span>
+<span>PATCH</span>
+</div>
+<div class="w-full h-px bg-[#e3ddd4] mb-6"></div>
+<p class="font-body-md text-body-md text-[#1a1814] leading-relaxed mb-3">
+        Set cart_id to an empty cart when login creates the session. Checkout then stops raising KeyError.
+      </p>
+<div class="mb-4 font-code-base text-[12px] text-secondary">
+        Affected files: <span class="text-[#1a1814]">api/auth.py</span>, <span class="text-[#1a1814]">tests/test_checkout.py</span>
+</div>
+<!-- Unified Diff View (Paper substrate, strict text-only markers) -->
+<div class="bg-[#f3f1ec] border border-[#e3ddd4] p-4 font-code-base text-[12.5px] leading-[22px] overflow-x-auto">
+<div class="text-secondary">--- a/api/auth.py</div>
+<div class="text-secondary">+++ b/api/auth.py</div>
+<div class="text-secondary mb-1">@@ -21,4 +21,6 @@ def build_session(user):</div>
+<div class="text-[#1a1814]">     return {</div>
+<div class="text-[#1a1814]">         "user_id": user.id,</div>
+<div class="text-[#1e4d3a] font-medium">+        "cart_id": None,  # initialized empty cart fallback</div>
+<div class="text-[#1a1814]">     }</div>
+</div>
+</section>
+<!-- 04 / VALIDATION -->
+<section class="mt-14">
+<div class="flex items-center gap-2 mb-2 font-section-marker text-section-marker text-secondary">
+<span>04</span>
+<span>/</span>
+<span>VALIDATION</span>
+</div>
+<div class="w-full h-px bg-[#e3ddd4] mb-6"></div>
+<div class="flex items-baseline justify-between mb-3 font-code-base text-[12px]">
+<span class="text-[#1a1814]">pytest -q tests/test_checkout.py</span>
+<div class="flex items-center gap-3">
+<span class="text-secondary">exit 1</span>
+<span class="text-[#8c3a2f] font-medium">failed</span>
+</div>
+</div>
+<!-- Real Pytest Terminal Output (wrapping, paper background, left hairline) -->
+<pre class="bg-[#f3f1ec] border-l border-[#e3ddd4] pl-4 py-1 font-code-base text-[12px] leading-[20px] text-[#1a1814] whitespace-pre-wrap overflow-x-auto">============================= test session starts ==============================
+rootdir: /repo, configfile: pyproject.toml
+collected 1 item
+
+tests/test_checkout.py <span class="text-[#8c3a2f] font-semibold">F</span>                                                 [100%]
+
+=================================== FAILURES ===================================
+<span class="text-[#8c3a2f] font-semibold">_________________________ test_checkout_after_login ___________________________</span>
+
+client = &lt;TestClient&gt;, test_user = &lt;User id=409&gt;
+
+    def test_checkout_after_login(client, test_user):
+        session = client.post("/auth/login", json={"u": test_user.id})
+&gt;       res = client.post("/checkout/commit", headers={"X-Session": session.token})
+        assert res.status_code == 200
+
+api/checkout.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+session = {'user_id': 409}
+
+&gt;   cart_id = session["cart_id"]
+<span class="text-[#8c3a2f]">E   KeyError: 'cart_id'</span>
+
+api/checkout.py:46: KeyError
+=========================== <span class="text-[#8c3a2f] font-semibold">1 failed in 0.14s</span> ===========================</pre>
+<p class="mt-4 font-body-md text-[13px] text-secondary">
+        Remaining risk: payment webhook was not run.
+      </p>
+</section>
+<!-- 05 / DECISION -->
+<section class="mt-14 mb-12">
+<div class="flex items-center gap-2 mb-2 font-section-marker text-section-marker text-secondary">
+<span>05</span>
+<span>/</span>
+<span>DECISION</span>
+</div>
+<div class="w-full h-px bg-[#e3ddd4] mb-6"></div>
+<p class="font-body-md text-body-md text-[#1a1814] leading-relaxed mb-4">
+        Waiting for a person in the room.
+      </p>
+<!-- Plain Text Instructions (Strictly non-interactive, no buttons) -->
+<div class="bg-[#faf9f6] border border-[#e3ddd4] p-4 font-code-base text-[12.5px] leading-relaxed space-y-1">
+<div class="text-secondary select-all">@devteam approve 8f3c1a</div>
+<div class="text-secondary select-all">@devteam reject 8f3c1a reason</div>
+</div>
+<div class="mt-5 flex items-center justify-between font-code-base text-[12px] text-secondary">
+<div>Reviewer: <span class="text-[#1a1814]">—</span></div>
+<div>Decided: <span class="text-[#1a1814]">—</span></div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#e3ddd4] flex items-center gap-2 font-code-base text-[11px] text-secondary">
+<span>Pull request</span>
+<span class="text-outline-variant">·</span>
+<span>not created</span>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low border-t border-outline-variant dark:border-outline-variant mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-space-xl py-space-md max-w-7xl mx-auto gap-space-sm text-center md:text-left">
+<p class="text-on-surface-variant dark:text-on-surface-variant font-meta-xs text-meta-xs">
+        DevTeam Engineering Archive — Case record is immutable and read-only. Review and sign-off occur exclusively in Switch #ENG-CORE.
+      </p>
+<div class="flex items-center gap-space-md shrink-0">
+<a class="text-primary dark:text-inverse-primary font-meta-xs text-meta-xs hover:text-on-tertiary-fixed-variant dark:hover:text-tertiary-fixed underline underline-offset-2" href="#switch-core">SWITCH ROOM #ENG-CORE</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-meta-xs text-meta-xs hover:text-on-tertiary-fixed-variant dark:hover:text-tertiary-fixed underline underline-offset-2" href="#incident-log">INCIDENT LOG</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-meta-xs text-meta-xs hover:text-on-tertiary-fixed-variant dark:hover:text-tertiary-fixed underline underline-offset-2" href="#audit-trail">AUDIT TRAIL</a>
+</div>
+</div>
+</footer>
+</body></html>

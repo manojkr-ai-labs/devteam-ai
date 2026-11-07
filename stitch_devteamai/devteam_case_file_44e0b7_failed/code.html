@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevTeam Case File — 44e0b7 (FAILED)</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Newsreader, IBM Plex Sans, Courier Prime (IBM Plex Mono proxy via design system specs) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#204f3c",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#494641",
+            "primary-fixed-dim": "#cbc6bf",
+            "on-surface": "#1b1c19",
+            "secondary-fixed": "#eae1da",
+            "background": "#fbf9f4",
+            "surface-container-highest": "#e4e2dd",
+            "secondary-container": "#eae1da",
+            "on-secondary-container": "#69635e",
+            "primary-fixed": "#e8e1db",
+            "tertiary-container": "#002115",
+            "tertiary": "#000000",
+            "inverse-primary": "#cbc6bf",
+            "on-surface-variant": "#4a463f",
+            "surface-container-low": "#f5f3ee",
+            "secondary-fixed-dim": "#cdc5bf",
+            "on-background": "#1b1c19",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#4b4641",
+            "tertiary-fixed": "#bbeed3",
+            "surface-tint": "#615e59",
+            "on-error-container": "#93000a",
+            "surface-bright": "#fbf9f4",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#002115",
+            "on-tertiary-container": "#5f8e77",
+            "outline": "#7b766e",
+            "surface": "#fbf9f4",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#30312e",
+            "secondary": "#635d58",
+            "surface-variant": "#e4e2dd",
+            "on-primary-fixed": "#1d1b17",
+            "on-primary-container": "#87837d",
+            "primary": "#000000",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#f3f1ec",
+            "outline-variant": "#ccc6bc",
+            "on-secondary-fixed": "#1f1b17",
+            "surface-dim": "#dcdad5",
+            "surface-container": "#f0eee9",
+            "on-secondary": "#ffffff",
+            "primary-container": "#1d1b17",
+            "tertiary-fixed-dim": "#a0d1b8",
+            "surface-container-high": "#eae8e3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "body-md": ["IBM Plex Sans"],
+            "headline-xl": ["Newsreader"],
+            "code-base": ["Courier Prime"],
+            "headline-lg": ["Newsreader"],
+            "meta-sm": ["IBM Plex Sans"],
+            "body-lg": ["IBM Plex Sans"],
+            "section-marker": ["IBM Plex Sans"],
+            "meta-xs": ["IBM Plex Sans"],
+            "code-meta": ["Courier Prime"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "code-base": ["13px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "meta-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }],
+            "section-marker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "meta-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "code-meta": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md select-text">
+<!-- TopNavBar (Shared Component) -->
+<header class="w-full bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-space-xl py-space-sm max-w-7xl mx-auto h-14">
+<!-- Brand & Context Segment -->
+<div class="flex items-center gap-space-lg">
+<span class="font-section-marker text-section-marker tracking-widest text-on-surface dark:text-inverse-on-surface uppercase">
+          DevTeam / ARCHIVE
+        </span>
+<span class="text-outline-variant select-none">/</span>
+<nav class="flex items-center gap-space-sm">
+<span class="text-on-surface dark:text-inverse-on-surface font-code-meta text-code-meta">
+            org / repo / CASE-8821
+          </span>
+</nav>
+</div>
+<!-- Trailing Switch / Context Action -->
+<div class="flex items-center gap-space-xs font-code-meta text-code-meta text-on-surface-variant hover:text-on-tertiary-fixed-variant cursor-pointer underline-offset-4 hover:underline">
+<span>SWITCH #ENG-CORE</span>
+<span class="material-symbols-outlined text-[14px] leading-none" data-icon="open_in_new">open_in_new</span>
+</div>
+</div>
+</header>
+<!-- Main Archival Document Canvas -->
+<main class="flex-grow w-full max-w-[760px] mx-auto px-6 py-12 md:py-16">
+<!-- 1. Back link -->
+<div class="mb-8">
+<a class="font-code-meta text-code-meta text-secondary hover:text-on-surface inline-flex items-center gap-1 cursor-pointer" href="#">
+        ← Open work
+      </a>
+</div>
+<!-- 2. Meta line -->
+<div class="flex items-center gap-2 font-code-meta text-code-meta text-secondary mb-4">
+<!-- 2px brick vertical tick immediately before task id -->
+<span class="w-[2px] h-3.5 bg-error inline-block"></span>
+<span class="text-on-surface">44e0b7</span>
+<span class="text-outline">·</span>
+<span>critical</span>
+<span class="text-outline">·</span>
+<span class="text-error font-medium">FAILED</span>
+<span class="text-outline">·</span>
+<span>yesterday</span>
+</div>
+<!-- 3. Title -->
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-3">
+      Checkout suite killed at the sandbox timeout
+    </h1>
+<!-- 4. Subtitle / Reason (Strictly planar brick text, zero card/banner box) -->
+<div class="text-error font-code-meta text-code-meta mb-12">
+      Sandbox timed out after 120s. Reason: interrupted.
+    </div>
+<!-- 01 / TIMELINE SECTION -->
+<section class="mb-14">
+<div class="flex items-center gap-3 mb-6 pb-2 border-b border-outline-variant">
+<h2 class="font-section-marker text-section-marker text-secondary uppercase tracking-widest">
+          01 / TIMELINE
+        </h2>
+</div>
+<!-- Chronological hairline spine -->
+<div class="relative pl-6 ml-2 border-l border-outline-variant space-y-6">
+<!-- Timeline Item 1 -->
+<div class="relative group">
+<!-- Bullet node on spine -->
+<div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-[2px] bg-outline-variant group-hover:bg-secondary"></div>
+<div class="flex items-baseline gap-4 font-code-meta text-code-meta">
+<span class="text-secondary tabular-nums">14:10</span>
+<span class="text-secondary font-medium">agent</span>
+<span class="text-on-surface">Received. Task 44e0b7</span>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative group">
+<!-- Bullet node on spine -->
+<div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-[2px] bg-outline-variant group-hover:bg-secondary"></div>
+<div class="flex items-baseline gap-4 font-code-meta text-code-meta">
+<span class="text-secondary tabular-nums">14:11</span>
+<span class="text-secondary font-medium">agent</span>
+<span class="text-on-surface">Environment provisioned. Pytest suite started</span>
+</div>
+</div>
+<!-- Timeline Item 3 (Failure Termination) -->
+<div class="relative group">
+<!-- Termination brick node on spine -->
+<div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-[2px] bg-error"></div>
+<div class="flex items-baseline gap-4 font-code-meta text-code-meta">
+<span class="text-secondary tabular-nums">14:13</span>
+<span class="text-secondary font-medium">agent</span>
+<span class="text-error">Sandbox timed out after 120s. Execution interrupted</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 02 / DECISION SECTION (Sections 02, 03, 04 of normal dossiers omitted completely) -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-6 pb-2 border-b border-outline-variant">
+<h2 class="font-section-marker text-section-marker text-secondary uppercase tracking-widest">
+          02 / DECISION
+        </h2>
+</div>
+<!-- Dossier Panel without shadows, planar hair-line layout -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-[2px]">
+<div class="space-y-1 mb-6">
+<p class="font-body-md text-body-md text-on-surface font-medium">
+            Nothing to approve.
+          </p>
+<p class="font-code-meta text-code-meta text-secondary">
+            Task terminated prior to hypothesis or diff generation.
+          </p>
+</div>
+<!-- Metadata / Sign-off status -->
+<div class="border-t border-outline-variant pt-4 mb-4 grid grid-cols-2 gap-4 font-code-meta text-code-meta text-secondary">
+<div>
+            Reviewer: <span class="text-on-surface">—</span>
+</div>
+<div>
+            Decided: <span class="text-on-surface">—</span>
+</div>
+</div>
+<!-- Pull Request Terminal Note -->
+<div class="border-t border-outline-variant pt-3 font-code-meta text-code-meta text-secondary flex items-center gap-2">
+<span>Pull request</span>
+<span class="text-outline">·</span>
+<span class="text-secondary italic">not created</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-surface-container-low dark:bg-surface-container-low border-t border-outline-variant dark:border-outline-variant docked full-width bottom-0 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-space-xl py-space-md max-w-7xl mx-auto gap-space-sm">
+<div class="font-meta-xs text-meta-xs text-on-surface-variant dark:text-on-surface-variant max-w-2xl text-center md:text-left">
+        DevTeam Engineering Archive — Case record is immutable and read-only. Review and sign-off occur exclusively in Switch #ENG-CORE.
+      </div>
+<div class="flex items-center gap-6">
+<a class="font-meta-xs text-meta-xs text-on-surface-variant dark:text-on-surface-variant hover:text-on-tertiary-fixed-variant dark:hover:text-tertiary-fixed underline underline-offset-2" href="#">
+          SWITCH ROOM #ENG-CORE
+        </a>
+<a class="font-meta-xs text-meta-xs text-on-surface-variant dark:text-on-surface-variant hover:text-on-tertiary-fixed-variant dark:hover:text-tertiary-fixed underline underline-offset-2" href="#">
+          INCIDENT LOG
+        </a>
+<a class="font-meta-xs text-meta-xs text-on-surface-variant dark:text-on-surface-variant hover:text-on-tertiary-fixed-variant dark:hover:text-tertiary-fixed underline underline-offset-2" href="#">
+          AUDIT TRAIL
+        </a>
+</div>
+</div>
+</footer>
+</body></html>

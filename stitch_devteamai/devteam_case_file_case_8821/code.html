@@ -1,0 +1,384 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DevTeam / ARCHIVE — CASE-8821</title>
+<!-- Typography: Newsreader, IBM Plex Sans, Courier Prime (mapped as IBM Plex Mono equivalent per design tokens) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#204f3c",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#eae1da",
+            "error-container": "#ffdad6",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#4a463f",
+            "secondary-container": "#eae1da",
+            "secondary-fixed-dim": "#cdc5bf",
+            "primary-fixed": "#e8e1db",
+            "on-primary-fixed": "#1d1b17",
+            "inverse-surface": "#30312e",
+            "surface-bright": "#fbf9f4",
+            "background": "#fbf9f4",
+            "on-background": "#1b1c19",
+            "on-error": "#ffffff",
+            "primary-container": "#1d1b17",
+            "tertiary-fixed": "#bbeed3",
+            "surface-container-low": "#f5f3ee",
+            "inverse-on-surface": "#f3f1ec",
+            "on-tertiary-fixed": "#002115",
+            "surface-tint": "#615e59",
+            "surface-variant": "#e4e2dd",
+            "inverse-primary": "#cbc6bf",
+            "surface-container": "#f0eee9",
+            "primary-fixed-dim": "#cbc6bf",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#ccc6bc",
+            "tertiary": "#000000",
+            "on-secondary-fixed": "#1f1b17",
+            "on-secondary-container": "#69635e",
+            "surface": "#fbf9f4",
+            "surface-container-high": "#eae8e3",
+            "on-primary-container": "#87837d",
+            "surface-dim": "#dcdad5",
+            "outline": "#7b766e",
+            "on-surface": "#1b1c19",
+            "primary": "#000000",
+            "on-secondary-fixed-variant": "#4b4641",
+            "secondary": "#635d58",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e4e2dd",
+            "on-tertiary-container": "#5f8e77",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#494641",
+            "tertiary-container": "#002115",
+            "tertiary-fixed-dim": "#a0d1b8"
+          },
+          "borderRadius": {
+            "DEFAULT": "2px",
+            "sm": "2px",
+            "md": "2px",
+            "lg": "2px",
+            "xl": "2px",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "margin": "2.5rem"
+          },
+          "fontFamily": {
+            "section-marker": ["IBM Plex Sans", "sans-serif"],
+            "code-base": ["Courier Prime", "monospace"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-xl": ["Newsreader", "serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "meta-xs": ["IBM Plex Sans", "sans-serif"],
+            "meta-sm": ["IBM Plex Sans", "sans-serif"],
+            "code-meta": ["Courier Prime", "monospace"]
+          },
+          "fontSize": {
+            "section-marker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "code-base": ["13px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }],
+            "meta-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "code-meta": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "meta-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Strict paper aesthetic enforcement: planar, hairline, unbleached grain */
+    body {
+      background-color: #f3f1ec;
+      color: #1a1814;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+    ::selection {
+      background-color: #e4e2dd;
+      color: #1a1814;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md antialiased text-[#1a1814]">
+<!-- Top Archival Bar (Executing TopNavBar Shared Component JSON specifications) -->
+<header class="w-full bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant">
+<div class="flex justify-between items-center w-full px-space-xl py-space-sm max-w-7xl mx-auto">
+<!-- Left: Identity & Repo Path -->
+<div class="flex items-center space-x-3">
+<span class="font-section-marker text-section-marker tracking-widest text-on-surface dark:text-inverse-on-surface uppercase">
+          DevTeam / ARCHIVE
+        </span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface dark:text-inverse-on-surface font-code-meta text-code-meta cursor-pointer underline-offset-4 hover:underline">
+          org / repo / CASE-8821
+        </span>
+<span class="text-outline-variant">/</span>
+<span class="font-code-meta text-code-meta text-on-surface-variant">
+          core-infra / lease-manager
+        </span>
+</div>
+<!-- Right: Trailing Actions & Switch Link -->
+<div class="flex items-center space-x-6">
+<div>
+<span class="font-section-marker text-section-marker uppercase text-on-surface">
+            STATUS: READY FOR REVIEW • REASONING RECORD CLOSED
+          </span>
+</div>
+<a class="font-section-marker text-section-marker uppercase text-on-tertiary-fixed-variant hover:underline cursor-pointer underline-offset-4" href="#eng-core">
+<span class="">SWITCH #ENG-CORE</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Canvas: 1120px Content Core -->
+<main class="flex-grow w-full max-w-[1120px] mx-auto px-space-lg py-space-xl">
+<!-- Dossier Header -->
+<header class="mb-space-xl">
+<!-- Monospace register label -->
+<div class="font-code-meta text-code-meta text-on-surface-variant mb-space-sm">
+        RECORD // CASE-8821 • LOGGED 2025-05-14 14:32:08 UTC
+      </div>
+<!-- Dossier Title -->
+<h1 class="font-headline-lg text-headline-lg text-[#1a1814] mb-space-lg max-w-4xl">
+        Race condition in distributed idempotency key lease eviction during cluster topology rebalance
+      </h1>
+<!-- Metadata Ledger Bar: Planar definition table with hairline dividers -->
+<div class="w-full border-t border-b border-outline-variant grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-outline-variant py-space-sm">
+<div class="pr-space-md py-1">
+<div class="font-section-marker text-section-marker text-[#6b6560] mb-0.5">ORIGIN</div>
+<div class="font-body-md text-body-md text-[#1a1814] truncate">
+            #eng-core <span class="font-code-meta text-code-meta text-[#6b6560]">(thread #8821)</span>
+</div>
+</div>
+<div class="px-space-md py-1">
+<div class="font-section-marker text-section-marker text-[#6b6560] mb-0.5">INCIDENT REF</div>
+<div class="font-code-base text-code-base text-[#1a1814]">INC-4091</div>
+</div>
+<div class="px-space-md py-1">
+<div class="font-section-marker text-section-marker text-[#6b6560] mb-0.5">BASE REVISION</div>
+<div class="font-code-base text-code-base text-on-surface">6a81f09e</div>
+</div>
+<div class="px-space-md py-1">
+<div class="font-section-marker text-section-marker text-[#6b6560] mb-0.5">HEAD REVISION</div>
+<div class="font-code-base text-code-base text-on-surface">e9f21b74</div>
+</div>
+<div class="pl-space-md py-1">
+<div class="font-section-marker text-section-marker text-[#6b6560] mb-0.5">HUMAN ASSIGNEE</div>
+<div class="font-body-md text-body-md text-[#1a1814]">
+            @elena.v <span class="font-meta-xs text-meta-xs text-[#6b6560]">(Switch)</span>
+</div>
+</div>
+</div>
+</header>
+<!-- SECTION 01 / SPECIFICATION & CONTEXT -->
+<section class="mb-space-xl">
+<div class="flex items-baseline justify-between border-b border-outline-variant pb-space-xs mb-space-md">
+<h2 class="font-section-marker text-section-marker text-[#6b6560]">
+          01 / SPECIFICATION &amp; CONTEXT
+        </h2>
+<span class="font-code-meta text-code-meta text-[#6b6560]">SUBSYSTEM: LEASE-EVICT-DAEMON</span>
+</div>
+<div class="pt-2 pb-space-sm">
+<p class="font-body-md text-body-md leading-relaxed text-[#1a1814] mb-space-md">
+          Under sudden node drain events, lease TTL refresh timers fired concurrently with partitioned cluster membership updates. When an orchestrator triggered rebalancing before discovery settled, the eviction supervisor purged valid active locks due to an uncoordinated generation epoch check, triggering write amplification on the backing Redis ring.
+        </p>
+<div class="pt-space-md border-t border-outline-variant grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<div class="font-section-marker text-section-marker text-[#6b6560] mb-1">CONSTRAINTS OBSERVED</div>
+<ul class="space-y-1 font-body-md text-body-md text-[#1a1814]">
+<li class="flex items-start">
+<span class="inline-block w-1.5 h-1.5 bg-[#1a1814] rounded-none mt-2 mr-2 flex-shrink-0"></span>
+<span class="">Zero external network RPC calls permitted during recovery hook execution.</span>
+</li>
+<li class="flex items-start">
+<span class="inline-block w-1.5 h-1.5 bg-[#1a1814] rounded-none mt-2 mr-2 flex-shrink-0"></span>
+<span class="">Eviction supervisor must verify monotonic clock epochs (<code class="font-code-base text-code-base px-1 py-0.5">clock_gettime(CLOCK_MONOTONIC)</code>).</span>
+</li>
+</ul>
+</div>
+<div>
+<div class="font-section-marker text-section-marker text-[#6b6560] mb-1">VERIFIED BOUNDARY</div>
+<p class="font-body-md text-body-md text-[#6b6560]">
+              Partition boundary verified at <code class="font-code-meta text-code-meta text-[#1a1814]">membership.py:114</code>. All locks held across drain remain preserved until the replacement coordinator claims the corresponding epoch generation hash.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02 / ACCESSED FILES -->
+<section class="mb-space-xl">
+<div class="flex items-baseline justify-between border-b border-outline-variant pb-space-xs mb-space-md">
+<h2 class="font-section-marker text-section-marker text-[#6b6560]">
+          02 / ACCESSED FILES
+        </h2>
+<span class="font-code-meta text-code-meta text-[#6b6560]">7 FILES INSPECTED • 2 MODIFIED</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse border-b border-outline-variant">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="py-2 px-1 font-section-marker text-section-marker text-[#6b6560]">FILE PATH</th>
+<th class="py-2 px-4 font-section-marker text-section-marker text-[#6b6560] text-center w-36">LINES READ</th>
+<th class="py-2 px-1 font-section-marker text-section-marker text-[#6b6560] text-right w-44">STATUS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant font-code-base text-code-base">
+<tr>
+<td class="py-2 px-1 text-[#1a1814]">services/lease/eviction.py</td>
+<td class="py-2 px-4 text-center text-[#6b6560] font-code-meta text-code-meta">412</td>
+<td class="py-2 px-1 text-right">
+<span class="text-on-tertiary-fixed-variant font-meta-xs text-meta-xs">MODIFIED</span>
+</td>
+</tr>
+<tr>
+<td class="py-2 px-1 text-[#1a1814]">services/lease/topology.py</td>
+<td class="py-2 px-4 text-center text-[#6b6560] font-code-meta text-code-meta">189</td>
+<td class="py-2 px-1 text-right">
+<span class="text-on-tertiary-fixed-variant font-meta-xs text-meta-xs">MODIFIED</span>
+</td>
+</tr>
+<tr>
+<td class="py-2 px-1 text-[#1a1814]">services/lease/storage/redis_adapter.py</td>
+<td class="py-2 px-4 text-center text-[#6b6560] font-code-meta text-code-meta">654</td>
+<td class="py-2 px-1 text-right font-meta-xs text-meta-xs text-[#6b6560]">REFERENCE ONLY</td>
+</tr>
+<tr>
+<td class="py-2 px-1 text-[#1a1814]">tests/unit/test_eviction_race.py</td>
+<td class="py-2 px-4 text-center text-[#6b6560] font-code-meta text-code-meta">88</td>
+<td class="py-2 px-1 text-right font-meta-xs text-meta-xs text-[#6b6560]">REFERENCE ONLY</td>
+</tr>
+<tr>
+<td class="py-2 px-1 text-[#1a1814]">tests/integration/test_rebalance.py</td>
+<td class="py-2 px-4 text-center text-[#6b6560] font-code-meta text-code-meta">320</td>
+<td class="py-2 px-1 text-right font-meta-xs text-meta-xs text-[#6b6560]">REFERENCE ONLY</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 03 / APPLIED PATCH -->
+<section class="mb-space-xl">
+<div class="flex items-baseline justify-between border-b border-outline-variant pb-space-xs mb-space-md">
+<h2 class="font-section-marker text-section-marker text-[#6b6560]">
+          03 / APPLIED PATCH
+        </h2>
+<span class="font-code-meta text-code-meta text-[#6b6560]">UNIFIED DIFF • +11 / -4</span>
+</div>
+<div>
+<div class="py-1.5 border-b border-outline-variant flex justify-between items-center">
+<span class="font-code-meta text-code-meta text-[#1a1814]">diff --git a/services/lease/eviction.py b/services/lease/eviction.py</span>
+<span class="font-section-marker text-section-marker text-[#6b6560]">INDEX 8b01c3e..f412d09 100644</span>
+</div>
+<div class="font-code-base text-code-base leading-5 overflow-x-auto text-[#1a1814] py-2">
+<div class="text-[#6b6560] select-none py-0.5">@@ -142,10 +142,17 @@ class EvictionCoordinator:</div>
+<div class="py-0.5 text-[#6b6560]">&nbsp;       def purge_stale_leases(self, key: str, epoch: int) -&gt; bool:</div>
+<div class="py-0.5 text-[#6b6560]">&nbsp;           now = monotonic_time_ns()</div>
+<div class="py-0.5 text-[#8c3a2f]">-&nbsp;          if self.topology.is_draining():</div>
+<div class="py-0.5 text-[#8c3a2f]">-&nbsp;              return self.storage.direct_evict(key)</div>
+<div class="py-0.5 text-[#8c3a2f]">-&nbsp;          </div>
+<div class="py-0.5 text-[#8c3a2f]">-&nbsp;          return self._evaluate_lease_expiration(key, now)</div>
+<div class="py-0.5 text-[#6b6560]">&nbsp;           # Acquire active generation ticket before checking drain status</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;          with self.generation_lock.shared_read():</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;              current_epoch = self.topology.current_epoch()</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;              if epoch &lt; current_epoch:</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;                  # Discard eviction attempt originated from partitioned predecessor</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;                  self.metrics.increment("eviction.stale_epoch_suppressed")</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;                  return False</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;              if self.topology.is_draining():</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;                  return self._delegate_to_successor(key, epoch)</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;</div>
+<div class="py-0.5 text-on-tertiary-fixed-variant">+&nbsp;              return self._evaluate_lease_expiration(key, now)</div>
+<div class="py-0.5 text-[#6b6560]">&nbsp;</div>
+<div class="py-0.5 text-[#6b6560]">&nbsp;       def _delegate_to_successor(self, key: str, epoch: int) -&gt; bool:</div>
+<div class="py-0.5 text-[#6b6560]">&nbsp;           return self.storage.handover_lease(key, target_epoch=epoch)</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04 / VERIFICATION SUITE -->
+<section class="mb-space-xl">
+<div class="flex items-baseline justify-between border-b border-outline-variant pb-space-xs mb-space-md">
+<h2 class="font-section-marker text-section-marker text-[#6b6560]">
+          04 / VERIFICATION SUITE
+        </h2>
+<span class="font-code-meta text-code-meta text-[#6b6560]">PYTEST TESTRUNNER • PY311-LINUX-AMD64</span>
+</div>
+<div class="font-code-base text-code-base leading-relaxed text-[#1a1814] py-1">
+<div class="text-[#6b6560] mb-3 pb-2 border-b border-outline-variant flex items-center justify-between">
+<span class="">$ pytest -v tests/integration/test_rebalance.py tests/unit/test_eviction_race.py</span>
+<span class="font-meta-xs text-meta-xs text-[#6b6560]">WALL TIME: 1.48s</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="text-[#1a1814]">tests/unit/test_eviction_race.py::test_concurrent_drain_eviction</span>
+<span class="text-on-tertiary-fixed-variant">PASSED [ 25%]</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[#1a1814]">tests/unit/test_eviction_race.py::test_monotonic_clock_skew_tolerance</span>
+<span class="text-on-tertiary-fixed-variant">PASSED [ 50%]</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[#1a1814]">tests/integration/test_rebalance.py::test_cluster_node_evacuation_3_nodes</span>
+<span class="text-on-tertiary-fixed-variant">PASSED [ 75%]</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[#1a1814]">tests/integration/test_rebalance.py::test_idempotency_lease_survives_topology_shift</span>
+<span class="text-on-tertiary-fixed-variant">PASSED [100%]</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant flex justify-between items-center text-[#6b6560]">
+<span class="text-on-tertiary-fixed-variant">====================== 4 passed, 0 failed in 1.48s ======================</span>
+<span class="font-section-marker text-section-marker uppercase text-on-tertiary-fixed-variant">
+            EXIT CODE: 0 [SUCCESS]
+          </span>
+</div>
+</div>
+</section>
+</main>
+<!-- Archival Footnote (Executing Footer Shared Component JSON specifications) -->
+<footer class="w-full bg-surface-container-low dark:bg-surface-container-low border-t border-outline-variant dark:border-outline-variant mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-space-xl py-space-md max-w-7xl mx-auto gap-space-sm">
+<!-- Footnote Immutable Text -->
+<div class="font-meta-xs text-meta-xs text-on-surface-variant dark:text-on-surface-variant">
+        DevTeam Engineering Archive — Case record is immutable and read-only. Review and sign-off occur exclusively in Switch #ENG-CORE.
+      </div>
+<!-- Navigation Links from Shared Components JSON -->
+<div class="flex items-center space-x-4">
+<a class="text-primary dark:text-inverse-primary font-meta-xs text-meta-xs underline underline-offset-2 hover:text-on-tertiary-fixed-variant" href="#eng-core">
+          SWITCH ROOM #ENG-CORE
+        </a>
+<span class="text-outline-variant">/</span>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-meta-xs text-meta-xs underline underline-offset-2 hover:text-on-tertiary-fixed-variant" href="#incident-log">
+          INCIDENT LOG
+        </a>
+<span class="text-outline-variant">/</span>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-meta-xs text-meta-xs underline underline-offset-2 hover:text-on-tertiary-fixed-variant" href="#audit-trail">
+          AUDIT TRAIL
+        </a>
+</div>
+</div>
+</footer>
+
+
+</body></html>

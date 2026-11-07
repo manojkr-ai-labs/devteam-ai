@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevTeam / ARCHIVE — Open work</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#cdc5bf",
+            "surface-dim": "#dcdad5",
+            "outline": "#7b766e",
+            "on-tertiary-container": "#5f8e77",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#a0d1b8",
+            "background": "#fbf9f4",
+            "on-primary-container": "#87837d",
+            "on-tertiary-fixed": "#002115",
+            "secondary-container": "#eae1da",
+            "secondary-fixed": "#eae1da",
+            "on-error-container": "#93000a",
+            "on-background": "#1b1c19",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#4a463f",
+            "surface": "#fbf9f4",
+            "surface-tint": "#615e59",
+            "outline-variant": "#ccc6bc",
+            "surface-container-low": "#f5f3ee",
+            "on-error": "#ffffff",
+            "inverse-primary": "#cbc6bf",
+            "inverse-surface": "#30312e",
+            "surface-container": "#f0eee9",
+            "tertiary-fixed": "#bbeed3",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#4b4641",
+            "surface-container-highest": "#e4e2dd",
+            "primary-container": "#1d1b17",
+            "primary-fixed": "#e8e1db",
+            "on-primary-fixed": "#1d1b17",
+            "on-surface": "#1b1c19",
+            "surface-variant": "#e4e2dd",
+            "on-secondary-container": "#69635e",
+            "on-primary-fixed-variant": "#494641",
+            "surface-container-high": "#eae8e3",
+            "inverse-on-surface": "#f3f1ec",
+            "on-secondary": "#ffffff",
+            "primary": "#000000",
+            "tertiary-container": "#002115",
+            "tertiary": "#000000",
+            "secondary": "#635d58",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed": "#1f1b17",
+            "primary-fixed-dim": "#cbc6bf",
+            "surface-bright": "#fbf9f4",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#204f3c",
+            "paper-bg": "#f3f1ec",
+            "paper-surface": "#faf9f6",
+            "paper-ink": "#1a1814",
+            "paper-secondary": "#6b6560",
+            "paper-hairline": "#e3ddd4",
+            "paper-pine": "#1e4d3a",
+            "paper-brick": "#8c3a2f"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "2.5rem"
+          },
+          "fontFamily": {
+            "code-base": ["Courier Prime", "monospace"],
+            "code-meta": ["Courier Prime", "monospace"],
+            "mono-plex": ["IBM Plex Mono", "monospace"],
+            "meta-xs": ["IBM Plex Sans", "sans-serif"],
+            "meta-sm": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "section-marker": ["IBM Plex Sans", "sans-serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-xl": ["Newsreader", "serif"]
+          },
+          "fontSize": {
+            "code-base": ["13px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+            "meta-xs": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "code-meta": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }],
+            "meta-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }],
+            "section-marker": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #f3f1ec;
+      color: #1a1814;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 15px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md selection:bg-secondary-container selection:text-paper-ink" style="background-color: #f3f1ec; color: #1a1814;">
+<!-- Top bar (docked full-width top-0, hairline bottom border) -->
+<header class="w-full h-[56px] border-b border-outline-variant bg-surface" style="background-color: #f3f1ec; border-bottom: 1px solid #e3ddd4;">
+<div class="max-w-[1120px] h-full mx-auto px-6 flex justify-between items-center">
+<div class="flex items-center gap-space-md">
+<span class="font-section-marker tracking-[0.18em] text-[13px] text-paper-ink font-semibold uppercase">DEVTEAM</span>
+<span class="text-outline-variant text-[12px] font-mono-plex" style="color: #ccc6bc;">/</span>
+<span class="font-mono-plex text-meta-sm text-paper-secondary">org / repo / CASE-8821</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-mono-plex text-[12px] leading-none text-paper-secondary" style="color: #6b6560;">Room  ·  live</span>
+<span class="text-outline-variant text-[12px] font-mono-plex" style="color: #ccc6bc;">|</span>
+<a class="font-mono-plex text-meta-sm text-paper-secondary hover:text-paper-ink flex items-center gap-1 cursor-pointer underline-offset-4 hover:underline" href="#eng-core" style="color: #6b6560;">
+<span>SWITCH #ENG-CORE</span>
+<span class="material-symbols-outlined" data-icon="open_in_new" style="font-size: 13px;">open_in_new</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Document Folio -->
+<main class="w-full flex-1">
+<div class="max-w-[1120px] mx-auto px-6 pt-16 pb-20">
+<!-- Page Title & Subtitle -->
+<section class="mb-12">
+<h1 class="font-headline-xl text-[40px] leading-[48px] text-paper-ink font-normal tracking-[-0.015em]" style="font-family: 'Newsreader', serif; color: #1a1814;">
+          Open work
+        </h1>
+<p class="font-body-md text-[14px] leading-[22px] text-paper-secondary mt-3" style="color: #6b6560;">
+          One active task in this room. Decisions happen in Switch.
+        </p>
+</section>
+<!-- Section Marker / Archival Index Header -->
+<div class="flex justify-between items-end pb-2 border-b border-outline-variant" style="border-bottom: 1px solid #e3ddd4;">
+<span class="font-section-marker text-[11px] tracking-[0.12em] font-semibold text-paper-secondary uppercase" style="color: #6b6560;">
+          01 / ACTIVE DOSSIER QUEUE
+        </span>
+<span class="font-mono-plex text-[11px] text-paper-secondary" style="color: #6b6560;">
+          4 ENTRIES LOGGED
+        </span>
+</div>
+<!-- Task List Container -->
+<div class="w-full divide-y border-b" style="border-color: #e3ddd4;">
+<!-- Row 1 -->
+<article class="relative h-[64px] flex items-center bg-transparent hover:bg-paper-surface transition-none group" style="border-bottom: 1px solid #e3ddd4;">
+<!-- 2px vertical tick (pine #1e4d3a) -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-[24px]" style="background-color: #1e4d3a;"></div>
+<div class="flex items-center w-full pl-5 pr-2">
+<!-- Task ID -->
+<span class="font-mono-plex text-[12px] text-paper-secondary w-[80px] shrink-0" style="color: #6b6560;">
+              8f3c1a
+            </span>
+<!-- Issue Title -->
+<div class="flex-1 min-w-0 pr-6">
+<a class="font-body-lg text-[16px] text-paper-ink font-medium truncate block underline-offset-4 group-hover:underline cursor-pointer" href="#" style="color: #1a1814;">
+                Checkout API returns HTTP 500 after user login
+              </a>
+</div>
+<!-- Priority -->
+<span class="font-body-md text-[14px] text-paper-secondary w-[100px] shrink-0" style="color: #6b6560;">
+              high
+            </span>
+<!-- State -->
+<span class="font-mono-plex text-[12px] tracking-[0.04em] font-medium w-[180px] shrink-0 uppercase" style="color: #1e4d3a;">
+              AWAITING APPROVAL
+            </span>
+<!-- Updated Time -->
+<span class="font-mono-plex text-[12px] text-paper-secondary text-right w-[100px] shrink-0" style="color: #6b6560;">
+              2m
+            </span>
+</div>
+</article>
+<!-- Row 2 -->
+<article class="relative h-[64px] flex items-center bg-transparent hover:bg-paper-surface transition-none group" style="border-bottom: 1px solid #e3ddd4;">
+<!-- 2px vertical tick (transparent / none) -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-[24px] bg-transparent"></div>
+<div class="flex items-center w-full pl-5 pr-2">
+<!-- Task ID -->
+<span class="font-mono-plex text-[12px] text-paper-secondary w-[80px] shrink-0" style="color: #6b6560;">
+              1c02e9
+            </span>
+<!-- Issue Title -->
+<div class="flex-1 min-w-0 pr-6">
+<a class="font-body-lg text-[16px] text-paper-ink font-medium truncate block underline-offset-4 group-hover:underline cursor-pointer" href="#" style="color: #1a1814;">
+                Login never writes cart_id onto the session
+              </a>
+</div>
+<!-- Priority -->
+<span class="font-body-md text-[14px] text-paper-secondary w-[100px] shrink-0" style="color: #6b6560;">
+              medium
+            </span>
+<!-- State -->
+<span class="font-mono-plex text-[12px] tracking-[0.04em] font-normal w-[180px] shrink-0 uppercase text-paper-ink" style="color: #1a1814;">
+              INVESTIGATING
+            </span>
+<!-- Updated Time -->
+<span class="font-mono-plex text-[12px] text-paper-secondary text-right w-[100px] shrink-0" style="color: #6b6560;">
+              18m
+            </span>
+</div>
+</article>
+<!-- Row 3 -->
+<article class="relative h-[64px] flex items-center bg-transparent hover:bg-paper-surface transition-none group" style="border-bottom: 1px solid #e3ddd4;">
+<!-- 2px vertical tick (transparent / none) -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-[24px] bg-transparent"></div>
+<div class="flex items-center w-full pl-5 pr-2">
+<!-- Task ID -->
+<span class="font-mono-plex text-[12px] text-paper-secondary w-[80px] shrink-0" style="color: #6b6560;">
+              9ab14d
+            </span>
+<!-- Issue Title -->
+<div class="flex-1 min-w-0 pr-6">
+<a class="font-body-lg text-[16px] text-paper-ink font-medium truncate block underline-offset-4 group-hover:underline cursor-pointer" href="#" style="color: #1a1814;">
+                Payment webhook signature mismatch
+              </a>
+</div>
+<!-- Priority -->
+<span class="font-body-md text-[14px] text-paper-secondary w-[100px] shrink-0" style="color: #6b6560;">
+              low
+            </span>
+<!-- State -->
+<span class="font-mono-plex text-[12px] tracking-[0.04em] font-normal w-[180px] shrink-0 uppercase text-paper-ink" style="color: #1a1814;">
+              PR CREATED
+            </span>
+<!-- Updated Time -->
+<span class="font-mono-plex text-[12px] text-paper-secondary text-right w-[100px] shrink-0" style="color: #6b6560;">
+              yesterday
+            </span>
+</div>
+</article>
+<!-- Row 4 -->
+<article class="relative h-[64px] flex items-center bg-transparent hover:bg-paper-surface transition-none group" style="border-bottom: 1px solid #e3ddd4;">
+<!-- 2px vertical tick (brick #8c3a2f) -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-[24px]" style="background-color: #8c3a2f;"></div>
+<div class="flex items-center w-full pl-5 pr-2">
+<!-- Task ID -->
+<span class="font-mono-plex text-[12px] text-paper-secondary w-[80px] shrink-0" style="color: #6b6560;">
+              44e0b7
+            </span>
+<!-- Issue Title -->
+<div class="flex-1 min-w-0 pr-6">
+<a class="font-body-lg text-[16px] text-paper-ink font-medium truncate block underline-offset-4 group-hover:underline cursor-pointer" href="#" style="color: #1a1814;">
+                Checkout suite killed at the sandbox timeout
+              </a>
+</div>
+<!-- Priority -->
+<span class="font-body-md text-[14px] text-paper-secondary w-[100px] shrink-0" style="color: #6b6560;">
+              critical
+            </span>
+<!-- State -->
+<span class="font-mono-plex text-[12px] tracking-[0.04em] font-medium w-[180px] shrink-0 uppercase" style="color: #8c3a2f;">
+              FAILED
+            </span>
+<!-- Updated Time -->
+<span class="font-mono-plex text-[12px] text-paper-secondary text-right w-[100px] shrink-0" style="color: #6b6560;">
+              yesterday
+            </span>
+</div>
+</article>
+</div>
+<!-- Archival Context Note -->
+<footer class="mt-16 pt-6 border-t border-outline-variant flex flex-col sm:flex-row justify-between items-baseline gap-4" style="border-top: 1px solid #e3ddd4;">
+<p class="font-meta-xs text-[11px] text-paper-secondary leading-relaxed" style="color: #6b6560;">
+          DevTeam Engineering Archive — Case record is immutable and read-only. Review and sign-off occur exclusively in Switch #ENG-CORE.
+        </p>
+<div class="flex items-center gap-6 shrink-0">
+<a class="font-meta-xs text-[11px] text-paper-secondary hover:text-paper-ink underline underline-offset-2" href="#eng-core" style="color: #6b6560;">
+            SWITCH ROOM #ENG-CORE
+          </a>
+<a class="font-meta-xs text-[11px] text-paper-secondary hover:text-paper-ink underline underline-offset-2" href="#incident-log" style="color: #6b6560;">
+            INCIDENT LOG
+          </a>
+<a class="font-meta-xs text-[11px] text-paper-secondary hover:text-paper-ink underline underline-offset-2" href="#audit-trail" style="color: #6b6560;">
+            AUDIT TRAIL
+          </a>
+</div>
+</footer>
+</div>
+</main>
+</body></html>
